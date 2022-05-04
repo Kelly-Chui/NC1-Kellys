@@ -11,7 +11,7 @@ import SwiftUI
 struct NC1_MyAPPApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Browse()
         }
     }
 }
