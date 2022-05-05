@@ -8,16 +8,21 @@
 import SwiftUI
 
 struct WIL: View {
+    var arrayWIL: [Post]
     var body: some View {
         
         VStack{
             HStack{
-                PostBlockView(post: Post(title: "내가 좋아하는 음악", coverImage: "Music"))
-                PostBlockView(post: Post(title: "홍차", coverImage: "BlackTea"))
+                PostBlockView(post: arrayWIL[0])
+                PostBlockView(post: arrayWIL[1])
             }
             HStack{
-                PostBlockView()
-                PostBlockView()
+                PostBlockView(post: arrayWIL[2])
+                PostBlockView(post: Post())
+            }
+            HStack{
+                PostBlockView(post: Post())
+                PostBlockView(post: Post())
             }
         }
             .navigationBarTitle("내가 좋아하는 것", displayMode: .large)
@@ -26,6 +31,6 @@ struct WIL: View {
 
 struct WIL_Previews: PreviewProvider {
     static var previews: some View {
-        WIL()
+        WIL(arrayWIL: [Post(), Post(), Post()])
     }
 }

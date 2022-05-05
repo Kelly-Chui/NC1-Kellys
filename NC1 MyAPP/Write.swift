@@ -8,7 +8,7 @@
 import Foundation
 
 struct Posts {
-    var post1: Post = Post(title: "좋아하는 음악", date: "", coverImage: "Music",
+    var post1: Post = Post(title: "좋아하는 음악", date: "Always", coverImage: "Music",
                            blockArr: [PostBlock(blockType: "image", text: "", image: "Lucy"),
                                       PostBlock(blockType: "text", text: "1. beatles - Lucy In the Sky with Diamods", image: ""),
                                       PostBlock(blockType: "text", text: "비틀즈를 좋아해서", image: ""),

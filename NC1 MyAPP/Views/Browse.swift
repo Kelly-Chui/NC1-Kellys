@@ -8,22 +8,19 @@
 import SwiftUI
 
 struct Browse: View {
-    var post1: Post = Post(title: "좋아하는 음악", date: "", coverImage:"Music")
-    var post2: Post = Post(title: "홍차", date: "", coverImage:"BlackTea")
-    var post3: Post = Post(title: "지도 보기", date: "", coverImage:"Globe")
-    var postWILArray: [Post] = [Post(title: "좋아하는 음악", date: "", coverImage: "Music",
+    var postWILArray: [Post] = [Post(title: "좋아하는 음악", date: "Always", coverImage: "Music",
                                       blockArr: [PostBlock(blockType: "image", text: "", image: "Lucy"),
                                                  PostBlock(blockType: "text", text: "1. beatles - Lucy In the Sky with Diamods", image: ""),
-                                                 PostBlock(blockType: "text", text: "비틀즈를 좋아해서", image: ""),
+                                                 PostBlock(blockType: "text", text: "비틀즈를 좋아하는데, 그 중에서 가장 좋아하는 곡", image: ""),
                                                  PostBlock(blockType: "image", text: "", image: "Yesterday"),
                                                  PostBlock(blockType: "text", text: "2. Jane Birkin -  Yesterday, Yes a Day", image: ""),
-                                                 PostBlock(blockType: "text", text: "재인 버킨은 잘 모르지만 노래가 좋다", image: ""),
+                                                 PostBlock(blockType: "text", text: "어렸을 때 우연히 한번 들었던 노래가 갑자기 생각나 찾아서 들어보고 빠져들게 되었다.", image: ""),
                                                  PostBlock(blockType: "image", text: "", image: "YueLiang"),
                                                  PostBlock(blockType: "text", text: "3. Teresa Teng - 월량대표아적심", image: ""),
-                                                 PostBlock(blockType: "text", text: "그렇습니다", image: "")]),
-                              Post(title: "홍차", date: "", coverImage:"BlackTea"),
-                              Post(title: "지도 보기", date: "", coverImage:"Globe")]
-    var postWIDArray: [Post] = [Post(title: "프로그래밍", date: "", coverImage: "Programming"), Post(title: "다이어트", date: "", coverImage:"Diet"), Post(title: "TMI", date: "", coverImage:"TMI")]
+                                                 PostBlock(blockType: "text", text: "중화권 노래중에 가장 좋아하는 노래, 나는 첨밀밀보다 이 노래가 더 좋다.", image: "")]),
+                              Post(title: "홍차", date: "Dec 2021~", coverImage:"BlackTea"),
+                              Post(title: "지도 보기", date: "2019 Winter~", coverImage:"Globe")]
+    var postWIDArray: [Post] = [Post(title: "프로그래밍", date: "Oct 2019~", coverImage: "Programming"), Post(title: "다이어트", date: "Mar 2022~", coverImage:"Diet"), Post(title: "TMI", date: "Always", coverImage:"TMI")]
     
     var body: some View {
         NavigationView {
@@ -40,7 +37,7 @@ struct Browse: View {
                             .font(.system(size: 25))
                         Text("崔鎭原\n")
                             .font(.system(size: 20))
-                        Text("화이팅 즐겁다 좋아요")
+                        Text("Good, Enjoy, Luck")
                         //                            Group{
                         //                                Text("Kelly Chui\n崔鎭原\n\n멋있는 한마디")
                         //                                //질문포인트..
@@ -56,7 +53,7 @@ struct Browse: View {
                                 .fontWeight(.bold)
                                 .padding(.leading)
                             Spacer()
-                            NavigationLink(destination: WIL()) {
+                            NavigationLink(destination: WIL(arrayWIL: postWILArray)) {
                                 Text("전체 보기")
                                     .foregroundColor(Color.customBrown)
                             }
@@ -81,7 +78,7 @@ struct Browse: View {
                                 .fontWeight(.bold)
                                 .padding(.leading)
                             Spacer()
-                            NavigationLink(destination: WID()) {
+                            NavigationLink(destination: WID(arrayWID: postWIDArray)) {
                                 Text("전체 보기")
                                     .foregroundColor(Color.customBrown)
                             }
@@ -102,14 +99,13 @@ struct Browse: View {
             }
             .navigationBarTitle("Browse", displayMode: .large)
         }
+        .accentColor(.customBrown)
     }
 }
 
 struct Browse_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            Browse()
-                .previewInterfaceOrientation(.portraitUpsideDown)
             Browse()
                 .previewInterfaceOrientation(.portraitUpsideDown)
         }
