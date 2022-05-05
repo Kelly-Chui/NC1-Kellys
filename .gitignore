@@ -99,3 +99,6 @@ iOSInjectionProject/
 **/xcshareddata/WorkspaceSettings.xcsettings
 
 # End of https://www.toptal.com/developers/gitignore/api/swift,xcode
+NC1 MyAPPUITests/NC1_MyAPPUITests.swift
+NC1 MyAPPUITests/NC1_MyAPPUITestsLaunchTests.swift
+NC1 MyAPPTests/NC1_MyAPPTests.swift
