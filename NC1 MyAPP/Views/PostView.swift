@@ -8,23 +8,30 @@
 import SwiftUI
 
 struct BlockView: View {
-    var Block : PostBlock
+    var block : PostBlock
     
     var body: some View {
-        if Block.blockType == "text" {
-            Text(Block.text)
+        if block.blockType == "text" {
+            Text(block.text)
+                .multilineTextAlignment(.leading)
         } else {
-            Image(Block.image)
+            Image(block.image)
         }
     }
 }
 
+
 struct PostView: View {
     //var currentPost: Post
-    
+    var post: Post = Post()
     var body: some View {
-        List {
+        VStack(alignment: .leading){
+            ForEach(0..<post.blockArr.count) { i in
+                BlockView(block: post.blockArr[i])
+            }
         }
+        .padding(.horizontal)
+        .navigationBarTitle(post.title, displayMode: .inline)
     }
 }
 

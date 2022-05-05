@@ -9,7 +9,18 @@ import SwiftUI
 
 struct WIL: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        VStack{
+            HStack{
+                PostBlockView(post: Post(title: "내가 좋아하는 음악", coverImage: "Music"))
+                PostBlockView(post: Post(title: "홍차", coverImage: "BlackTea"))
+            }
+            HStack{
+                PostBlockView()
+                PostBlockView()
+            }
+        }
+            .navigationBarTitle("내가 좋아하는 것", displayMode: .large)
     }
 }
 

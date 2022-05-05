@@ -8,6 +8,14 @@
 import SwiftUI
 
 struct Browse: View {
+    var post1: Post = Post(title: "좋아하는 음악", date: "", coverImage:"Music")
+    var post2: Post = Post(title: "홍차", date: "", coverImage:"BlackTea")
+    var post3: Post = Post(title: "지도 보기", date: "", coverImage:"Globe")
+    var postWILArray: [Post] = [Post(title: "좋아하는 음악", date: "", coverImage: "Music"),
+                              Post(title: "홍차", date: "", coverImage:"BlackTea"),
+                              Post(title: "지도 보기", date: "", coverImage:"Globe")]
+    var postWIDArray: [Post] = [Post(title: "프로그래밍", date: "", coverImage: "Programming"), Post(title: "다이어트", date: "", coverImage:"Diet"), Post(title: "TMI", date: "", coverImage:"TMI")]
+    
     var body: some View {
         NavigationView {
             VStack{
@@ -20,10 +28,10 @@ struct Browse: View {
                     Spacer()
                     VStack(alignment: .leading) {
                         Text("Kelly Chui")
-                            .font(.title)
-                        Text("崔鎭原")
-                        Spacer()
-                        Text("화이팅")
+                            .font(.system(size: 25))
+                        Text("崔鎭原\n")
+                            .font(.system(size: 20))
+                        Text("화이팅 즐겁다 좋아요")
                         //                            Group{
                         //                                Text("Kelly Chui\n崔鎭原\n\n멋있는 한마디")
                         //                                //질문포인트..
@@ -36,24 +44,23 @@ struct Browse: View {
                     VStack{
                         HStack{
                             Text("내가 좋아하는 것")
+                                .fontWeight(.bold)
                                 .padding(.leading)
                             Spacer()
-                            Button("전체 보기") {
-                                /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+                            NavigationLink(destination: WIL()) {
+                                Text("전체 보기")
+                                    .foregroundColor(Color.customBrown)
                             }
                             .padding(.trailing)
                         }
                         ScrollView(.horizontal) {
                             HStack(spacing: 20) {
-                                ForEach(0..<5) {
-                                    Text("Item \($0)")
-                                        .foregroundColor(.white)
-                                        .font(.largeTitle)
-                                        .frame(width: 300, height: 200)
-                                        .background(Color.black)
+                                ForEach(0..<postWILArray.count) {i in
+                                    BrowseBlockView(post: postWILArray[i])
                                 }
                             }
                         }
+                        .padding(.leading)
                     }
                     //내가 좋아하는 것
                 }
@@ -62,24 +69,24 @@ struct Browse: View {
                     VStack{
                         HStack{
                             Text("내가 하고 있는 것")
+                                .fontWeight(.bold)
                                 .padding(.leading)
                             Spacer()
-                            Button("전체 보기") {
-                                .
+                            NavigationLink(destination: WID()) {
+                                Text("전체 보기")
+                                    .foregroundColor(Color.customBrown)
                             }
+                            
                             .padding(.trailing)
                         }
                         ScrollView(.horizontal) {
                             HStack(spacing: 20) {
-                                ForEach(0..<5) {
-                                    Text("Item \($0)")
-                                        .foregroundColor(.white)
-                                        .font(.largeTitle)
-                                        .frame(width: 300, height: 200)
-                                        .background(Color.brown)
+                                ForEach(0..<postWIDArray.count) { i in
+                                    BrowseBlockView(post: postWIDArray[i])
                                 }
                             }
                         }
+                        .padding(.leading)
                     }
                     //내가 좋아하는 것
                 }

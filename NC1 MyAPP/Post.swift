@@ -8,22 +8,21 @@
 import Foundation
 
 struct PostBlock {
-    var postID : Int
-    var blockType : String
-    var text : String
-    var image : String
+    var blockType : String = "text"
+    var text : String = "안녕하세요"
+    var image : String = "Kelly"
 }
 
 struct Post {
     //얘네는 옵셔널로
     var isMyFavorite: Bool = true //어색함
     var title: String = "제목"
-    var date: String = "05-04-2022"
-    var blockArr: [PostBlock]
+    var date: String = "May 04, 2022"
+    var coverImage: String = "Kelly"
+    var blockArr: [PostBlock] = [PostBlock(blockType: "image"), PostBlock(text: "안녕하세요 Kelly 입니다."), PostBlock(text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."), PostBlock(blockType: "image", image: "TMI")]
 }
 
 struct MakeBlock {
-    var idArr : [Int]
     var typeArr : [String]
     var textArr : [String]
     var imageArr : [String]
@@ -34,6 +33,8 @@ struct MakePost {
     var titleArr : [String] = ["좋아하는 노래"]
     var dateArr : [String] = ["05-04-2022"]
     var blockArr2 : [[PostBlock]] = [] //비정방형 배열이 있으면 정말 좋겠지만 -> 있네
+    
+    
     /*
     func makeDateFormat(dateString : String) -> Date {
         let dateFormatter = DateFormatter()

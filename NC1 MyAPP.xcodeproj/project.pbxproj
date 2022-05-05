@@ -13,6 +13,15 @@
 		CF16FE53281E3BB200803C03 /* NC1_MyAPPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF16FE52281E3BB200803C03 /* NC1_MyAPPTests.swift */; };
 		CF16FE5D281E3BB200803C03 /* NC1_MyAPPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF16FE5C281E3BB200803C03 /* NC1_MyAPPUITests.swift */; };
 		CF16FE5F281E3BB200803C03 /* NC1_MyAPPUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF16FE5E281E3BB200803C03 /* NC1_MyAPPUITestsLaunchTests.swift */; };
+		CF495C6B2822D53200C645A5 /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF495C6A2822D53200C645A5 /* config.swift */; };
+		CF495C6D28239EB800C645A5 /* PostBlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF495C6C28239EB800C645A5 /* PostBlockView.swift */; };
+		CF495C6F2823EC2600C645A5 /* WID.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF495C6E2823EC2600C645A5 /* WID.swift */; };
+		CF495C712823F97A00C645A5 /* BareunBatangL.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF495C702823F97A00C645A5 /* BareunBatangL.ttf */; };
+		CF495C722823F97A00C645A5 /* BareunBatangL.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF495C702823F97A00C645A5 /* BareunBatangL.ttf */; };
+		CF495C732823F97A00C645A5 /* BareunBatangL.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CF495C702823F97A00C645A5 /* BareunBatangL.ttf */; };
+		CF495C75282407C900C645A5 /* font.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF495C74282407C800C645A5 /* font.swift */; };
+		CF495C76282407C900C645A5 /* font.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF495C74282407C800C645A5 /* font.swift */; };
+		CF495C77282407C900C645A5 /* font.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF495C74282407C800C645A5 /* font.swift */; };
 		CF7860CC281E678D0036EC57 /* Browse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7860CB281E678D0036EC57 /* Browse.swift */; };
 		CF7860CE281EDEE20036EC57 /* WIL.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7860CD281EDEE20036EC57 /* WIL.swift */; };
 		CFA478CF2820A80E009E3F26 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA478CE2820A80E009E3F26 /* PostView.swift */; };
@@ -46,6 +55,11 @@
 		CF16FE58281E3BB200803C03 /* NC1 MyAPPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NC1 MyAPPUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF16FE5C281E3BB200803C03 /* NC1_MyAPPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NC1_MyAPPUITests.swift; sourceTree = "<group>"; };
 		CF16FE5E281E3BB200803C03 /* NC1_MyAPPUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NC1_MyAPPUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CF495C6A2822D53200C645A5 /* config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
+		CF495C6C28239EB800C645A5 /* PostBlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostBlockView.swift; sourceTree = "<group>"; };
+		CF495C6E2823EC2600C645A5 /* WID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WID.swift; sourceTree = "<group>"; };
+		CF495C702823F97A00C645A5 /* BareunBatangL.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BareunBatangL.ttf; sourceTree = "<group>"; };
+		CF495C74282407C800C645A5 /* font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = font.swift; sourceTree = "<group>"; };
 		CF7860CB281E678D0036EC57 /* Browse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Browse.swift; sourceTree = "<group>"; };
 		CF7860CD281EDEE20036EC57 /* WIL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WIL.swift; sourceTree = "<group>"; };
 		CFA478CE2820A80E009E3F26 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
@@ -80,6 +94,7 @@
 		CF16FE35281E3BAF00803C03 = {
 			isa = PBXGroup;
 			children = (
+				CF495C702823F97A00C645A5 /* BareunBatangL.ttf */,
 				CF16FE40281E3BAF00803C03 /* NC1 MyAPP */,
 				CF16FE51281E3BB200803C03 /* NC1 MyAPPTests */,
 				CF16FE5B281E3BB200803C03 /* NC1 MyAPPUITests */,
@@ -102,6 +117,8 @@
 			children = (
 				CF16FE41281E3BAF00803C03 /* NC1_MyAPPApp.swift */,
 				CFA478D32820CDEB009E3F26 /* Post.swift */,
+				CF495C6A2822D53200C645A5 /* config.swift */,
+				CF495C74282407C800C645A5 /* font.swift */,
 				CFA478D22820CC58009E3F26 /* Views */,
 				CF16FE45281E3BB200803C03 /* Assets.xcassets */,
 				CF16FE47281E3BB200803C03 /* Preview Content */,
@@ -139,7 +156,9 @@
 			children = (
 				CF7860CB281E678D0036EC57 /* Browse.swift */,
 				CF7860CD281EDEE20036EC57 /* WIL.swift */,
+				CF495C6E2823EC2600C645A5 /* WID.swift */,
 				CFA478CE2820A80E009E3F26 /* PostView.swift */,
+				CF495C6C28239EB800C645A5 /* PostBlockView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -248,6 +267,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF495C712823F97A00C645A5 /* BareunBatangL.ttf in Resources */,
 				CF16FE49281E3BB200803C03 /* Preview Assets.xcassets in Resources */,
 				CF16FE46281E3BB200803C03 /* Assets.xcassets in Resources */,
 			);
@@ -257,6 +277,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF495C722823F97A00C645A5 /* BareunBatangL.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +285,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF495C732823F97A00C645A5 /* BareunBatangL.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,10 +296,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF495C6F2823EC2600C645A5 /* WID.swift in Sources */,
 				CF16FE42281E3BAF00803C03 /* NC1_MyAPPApp.swift in Sources */,
 				CF7860CE281EDEE20036EC57 /* WIL.swift in Sources */,
 				CFA478D42820CDEB009E3F26 /* Post.swift in Sources */,
+				CF495C6B2822D53200C645A5 /* config.swift in Sources */,
+				CF495C75282407C900C645A5 /* font.swift in Sources */,
 				CFA478CF2820A80E009E3F26 /* PostView.swift in Sources */,
+				CF495C6D28239EB800C645A5 /* PostBlockView.swift in Sources */,
 				CF7860CC281E678D0036EC57 /* Browse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF495C76282407C900C645A5 /* font.swift in Sources */,
 				CF16FE53281E3BB200803C03 /* NC1_MyAPPTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,6 +323,7 @@
 			files = (
 				CF16FE5D281E3BB200803C03 /* NC1_MyAPPUITests.swift in Sources */,
 				CF16FE5F281E3BB200803C03 /* NC1_MyAPPUITestsLaunchTests.swift in Sources */,
+				CF495C77282407C900C645A5 /* font.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
