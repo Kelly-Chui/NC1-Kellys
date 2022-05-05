@@ -16,6 +16,8 @@ struct BlockView: View {
                 .multilineTextAlignment(.leading)
         } else {
             Image(block.image)
+                .resizable()
+                .frame(width: 200, height: 200)
         }
     }
 }
@@ -25,18 +27,22 @@ struct PostView: View {
     //var currentPost: Post
     var post: Post = Post()
     var body: some View {
-        Image(post.coverImage)
-            .resizable()
-            .aspectRatio(contentMode: .fill)
         ScrollView(.vertical){
-            VStack(alignment: .leading){
+            LazyVStack(alignment: .leading){
                 ForEach(0..<post.blockArr.count) { i in
                     BlockView(block: post.blockArr[i])
                 }
             }
         }
-        .padding(.horizontal)
-        .navigationBarTitle(post.title, displayMode: .inline)
+        .frame(
+              minWidth: 0,
+              maxWidth: .infinity,
+              minHeight: 0,
+              maxHeight: .infinity,
+              alignment: .topLeading
+            )
+        .padding([.top, .leading, .trailing])
+        .navigationBarTitle(post.title, displayMode: .large)
     }
 }
 

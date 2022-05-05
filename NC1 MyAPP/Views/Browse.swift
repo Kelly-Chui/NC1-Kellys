@@ -11,7 +11,16 @@ struct Browse: View {
     var post1: Post = Post(title: "좋아하는 음악", date: "", coverImage:"Music")
     var post2: Post = Post(title: "홍차", date: "", coverImage:"BlackTea")
     var post3: Post = Post(title: "지도 보기", date: "", coverImage:"Globe")
-    var postWILArray: [Post] = [Post(title: "좋아하는 음악", date: "", coverImage: "Music"),
+    var postWILArray: [Post] = [Post(title: "좋아하는 음악", date: "", coverImage: "Music",
+                                      blockArr: [PostBlock(blockType: "image", text: "", image: "Lucy"),
+                                                 PostBlock(blockType: "text", text: "1. beatles - Lucy In the Sky with Diamods", image: ""),
+                                                 PostBlock(blockType: "text", text: "비틀즈를 좋아해서", image: ""),
+                                                 PostBlock(blockType: "image", text: "", image: "Yesterday"),
+                                                 PostBlock(blockType: "text", text: "2. Jane Birkin -  Yesterday, Yes a Day", image: ""),
+                                                 PostBlock(blockType: "text", text: "재인 버킨은 잘 모르지만 노래가 좋다", image: ""),
+                                                 PostBlock(blockType: "image", text: "", image: "YueLiang"),
+                                                 PostBlock(blockType: "text", text: "3. Teresa Teng - 월량대표아적심", image: ""),
+                                                 PostBlock(blockType: "text", text: "그렇습니다", image: "")]),
                               Post(title: "홍차", date: "", coverImage:"BlackTea"),
                               Post(title: "지도 보기", date: "", coverImage:"Globe")]
     var postWIDArray: [Post] = [Post(title: "프로그래밍", date: "", coverImage: "Programming"), Post(title: "다이어트", date: "", coverImage:"Diet"), Post(title: "TMI", date: "", coverImage:"TMI")]
