@@ -25,9 +25,14 @@ struct PostView: View {
     //var currentPost: Post
     var post: Post = Post()
     var body: some View {
-        VStack(alignment: .leading){
-            ForEach(0..<post.blockArr.count) { i in
-                BlockView(block: post.blockArr[i])
+        Image(post.coverImage)
+            .resizable()
+            .aspectRatio(contentMode: .fill)
+        ScrollView(.vertical){
+            VStack(alignment: .leading){
+                ForEach(0..<post.blockArr.count) { i in
+                    BlockView(block: post.blockArr[i])
+                }
             }
         }
         .padding(.horizontal)
