@@ -105,9 +105,6 @@ struct Browse: View {
 
 struct Browse_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            Browse()
-                .previewInterfaceOrientation(.portraitUpsideDown)
-        }
+        Browse()
     }
 }
